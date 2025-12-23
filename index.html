@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUNATEACH | Elite Language Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #000000;
+            --ray-bg: #0C0C0C;
+            --border: #1F1F1F;
+            --accent: #FF6363;
+            --muted: #8E8E8E;
+            --text: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text);
+            margin: 0;
+            overflow-x: hidden;
+            letter-spacing: -0.02em;
+        }
+
+        /* Raycast Grid Background */
+        .raycast-bg {
+            background-image: 
+                linear-gradient(var(--border) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(circle at center, black 0%, transparent 80%);
+        }
+
+        .raycast-card {
+            background: var(--ray-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .raycast-card:hover {
+            border-color: #333;
+        }
+
+        .accent-text {
+            color: var(--accent);
+        }
+
+        .muted-text {
+            color: var(--muted);
+        }
+
+        .mono {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg-color); }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-ray {
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        kbd {
+            background: #262626;
+            border: 1px solid #333;
+            border-radius: 4px;
+            padding: 2px 4px;
+            font-size: 10px;
+            font-family: inherit;
+            color: var(--muted);
+            box-shadow: 0 1px 0 rgba(255,255,255,0.05);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^0.21.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
